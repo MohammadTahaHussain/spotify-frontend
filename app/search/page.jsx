@@ -17,7 +17,7 @@ const SearchPage = () => {
         e.preventDefault()
         inputRef.current.blur();
         setIsLoading(true)
-        axios.get('http://192.168.1.109:8080/api/search', {
+        axios.get('https://lazy-puce-bandicoot-wig.cyclic.app//api/search', {
             params: {
                 query: search
             }
