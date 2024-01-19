@@ -6,51 +6,22 @@ import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import SearchResultCard from "@/components/resultCard"
 import { useRef } from "react";
+import Navbar from "@/components/Navbar";
 
 const SearchPage = () => {
     const [search, setSearch] = useState('')
     const [results, setResults] = useState([])
     const [isLoading, setIsLoading] = useState(false)
-    const inputRef = useRef();
 
-    const handleSearch = (e) => {
-        e.preventDefault()
-        inputRef.current.blur();
-        setIsLoading(true)
-        axios.get('https://lazy-puce-bandicoot-wig.cyclic.app//api/search', {
-            params: {
-                query: search
-            }
-        })
-            .then((res) => {
-                console.clear()
-                console.log(res.data.tracks.items[0]);
-                setResults(res.data.tracks.items)
-                setIsLoading(false)
-            })
-            .catch((error) => {
-                alert(error)
-                console.error(error);
-                setIsLoading(false)
-            });
-
-    }
     return (
         <>
             <Head>
                 <title>Spotify - Search</title>
             </Head>
             <div className="bg-black min-h-screen">
-                <div className="max-w-screen-xl m-auto max-lg:px-5">
-                    <div className="flex gap-x-2 justify-between items-center sticky top-0 z-10 py-2 bg-black">
-                        <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png" width={122} height={122} alt="" />
-                        <form onSubmit={handleSearch} className="flex">
-                            <input ref={inputRef} value={search} onChange={(e) => setSearch(e.target.value)} type="text" name="" id="" placeholder="Search track" className="px-2 rounded-l" />
-                            <button type="submit" className="bg-spotify rounded-r flex justify-center items-center h-8 w-10"><CiSearch className="text-white text-[26px]" /></button>
-                        </form>
-                    </div>
-
-                    {!isLoading && <div className="flex items-center justify-center gap-4 mt-4 flex-wrap">
+                <Navbar setSearchResults={setResults} setLoading={setIsLoading} isSearch={true} searchValue={search} setValue={setSearch} />
+                <div className="max-w-screen-xl m-auto max-lg:px-5 mt-4">
+                    {!isLoading && <div className="flex items-center justify-center gap-4 flex-wrap">
                         {results?.map((album) => (
                             <SearchResultCard key={album.id} data={album} />
                         ))}

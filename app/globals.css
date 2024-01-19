@@ -7,3 +7,7 @@
 * {
     font-family: "Poppins", sans-serif !important;
 }
+
+button[aria-lable='Close'] {
+    top: 20px;
+}
