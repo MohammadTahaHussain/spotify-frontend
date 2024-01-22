@@ -8,11 +8,11 @@ const HomePage = () => {
                 <title>Spotify - Home</title>
             </Head>
                 <Navbar/>
-            <div className="bg-black min-h-screen py-10">
+            <div className="bg-black min-h-screen py-10 px-2">
                 <div className="max-w-[600px] rounded-lg py-2 m-auto bg-[#2a2a2a] px-5 text-white text-lg">
                     <h1 className="text-4xl text-white">What is spotify?</h1>
                     <div className="my-2">
-                        <iframe width="564" height="317" src="https://www.youtube.com/embed/j8L5ySUufdE" title="What is Spotify" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe className="max-w-[564px] w-full" height="317" src="https://www.youtube.com/embed/j8L5ySUufdE" title="What is Spotify" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <p className="my-2">
                         Spotify is a digital music, podcast, and video service that gives you access to millions of songs and other content from creators all over the world.

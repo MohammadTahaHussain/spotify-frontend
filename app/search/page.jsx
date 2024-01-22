@@ -40,6 +40,11 @@ const SearchPage = () => {
 
                         </div>
                     }
+                    {
+                        results?.length < 1 && !isLoading && <div className="h-[90vh] flex justify-center items-center">
+                            <h1 className="text-white text-center font-semibold text-lg">Get started by searching the <br /> Track you love most</h1>
+                        </div>
+                    }
 
                 </div>
             </div>

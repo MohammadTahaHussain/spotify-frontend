@@ -11,3 +11,7 @@
 button[aria-lable='Close'] {
     top: 20px;
 }
+
+.ant-dropdown-menu-item {
+    padding: 0px !important;
+}
