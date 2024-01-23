@@ -72,7 +72,7 @@ const Navbar = ({ setValue, isSearch, setLoading, searchValue, setSearchResults 
                 </div>
                 {isSearch && <div className="flex gap-x-2 justify-between items-center">
                     <form onSubmit={handleSearch} className="flex">
-                        <input ref={inputRef} value={searchValue} onChange={(e) => setValue(e.target.value)} type="text" name="" id="" placeholder="Search track" className="px-2 rounded-l" />
+                        <input ref={inputRef} value={searchValue} onChange={(e) => setValue(e.target.value)} type="text" name="" id="" placeholder="Search track" className="px-2 rounded-l w-full" />
                         <button type="submit" className="bg-spotify rounded-r flex justify-center items-center h-8 w-10"><CiSearch className="text-white text-[26px]" /></button>
                     </form>
                 </div>}
