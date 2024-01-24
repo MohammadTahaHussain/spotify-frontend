@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FaPlayCircle, FaPauseCircle } from "react-icons/fa";
+
 
 const AudioPlayer = ({ audioUrl }) => {
   const [isPlaying, setPlaying] = useState(false);
@@ -14,10 +16,10 @@ const AudioPlayer = ({ audioUrl }) => {
   };
 
   return (
-    <div>
+    <div className='mt-2'>
       <audio ref={audioRef} src={audioUrl} />
-      <button onClick={handlePlayPause}>
-        {isPlaying ? 'Pause' : 'Play'}
+      <button onClick={handlePlayPause} className='bg-black rounded-full'>
+        {isPlaying ? <FaPauseCircle className='text-[20px]' /> : <FaPlayCircle className='text-[20px]' />}
       </button>
     </div>
   );

@@ -20,7 +20,7 @@ const SearchPage = () => {
             </Head>
             <div className="bg-black min-h-screen">
                 <Navbar setSearchResults={setResults} setLoading={setIsLoading} isSearch={true} searchValue={search} setValue={setSearch} />
-                <div className="max-w-screen-xl m-auto max-lg:px-5 mt-4">
+                <div className="max-w-screen-xl m-auto max-lg:px-5 mt-4 pb-4">
                     {!isLoading && <div className="flex items-center justify-center gap-4 flex-wrap">
                         {results?.map((album) => (
                             <SearchResultCard key={album.id} data={album} />

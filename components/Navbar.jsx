@@ -63,13 +63,12 @@ const Navbar = ({ setValue, isSearch, setLoading, searchValue, setSearchResults 
     }, [])
 
     return (
-        <div className="py-2 sticky z-50 top-0 bg-gradient-to-r from-[#197539] via-black to-black">
+        <div className="py-3 sticky z-50 top-0 bg-gradient-to-r from-white via-black to-black">
             <section className="flex justify-between items-center max-w-screen-xl m-auto px-2 lg:px-10 gap-x-2">
-                <div className="flex items-center gap-x-2">
-                    {/* <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png" width={122} height={122} alt="" /> */}
-                    <FaSpotify className="text-white text-[36px]"/>
-                    <span className="text-white font-bold text-lg">Spotify</span>
-                </div>
+                <Link href={'/'} className="flex items-center gap-x-2">
+                    <FaSpotify className="text-black text-[46px]" />
+                    <span className="text-black font-bold text-lg lg:text-2xl">Spotify</span>
+                </Link>
                 {isSearch && <div className="flex gap-x-2 justify-between items-center">
                     <form onSubmit={handleSearch} className="flex">
                         <input ref={inputRef} value={searchValue} onChange={(e) => setValue(e.target.value)} type="text" name="" id="" placeholder="Search track" className="px-2 rounded-l w-full" />
@@ -93,7 +92,6 @@ const Navbar = ({ setValue, isSearch, setLoading, searchValue, setSearchResults 
                     </a>
                 </Dropdown>
             </section>
-           
         </div>
     )
 }
