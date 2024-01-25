@@ -63,7 +63,7 @@ const Navbar = ({ setValue, isSearch, setLoading, searchValue, setSearchResults 
     }, [])
 
     return (
-        <div className="py-3 sticky z-50 top-0 bg-gradient-to-r from-white via-black to-black">
+        <div className="py-3 sticky z-50 top-0 bg-black">
             <section className="flex justify-between items-center max-w-screen-xl m-auto px-2 lg:px-10 gap-x-2">
                 <Link href={'/'} className="flex items-center gap-x-2">
                     <FaSpotify className="text-black text-[46px]" />
