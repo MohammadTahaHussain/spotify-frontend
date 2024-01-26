@@ -66,8 +66,8 @@ const Navbar = ({ setValue, isSearch, setLoading, searchValue, setSearchResults 
         <div className="py-3 sticky z-50 top-0 bg-black">
             <section className="flex justify-between items-center max-w-screen-xl m-auto px-2 lg:px-10 gap-x-2">
                 <Link href={'/'} className="flex items-center gap-x-2">
-                    <FaSpotify className="text-black text-[46px]" />
-                    <span className="text-black font-bold text-lg lg:text-2xl">Spotify</span>
+                    <FaSpotify className="text-white text-[46px]" />
+                    <span className="text-white font-bold text-lg lg:text-2xl">Spotify</span>
                 </Link>
                 {isSearch && <div className="flex gap-x-2 justify-between items-center">
                     <form onSubmit={handleSearch} className="flex">
